@@ -41,13 +41,14 @@ function Wel() {
         
         {/* Login Button: Larger size, more aggressive shadow, stronger hover effect */}
         {/* bg-cyan-500: Strong accent color, py-4 px-12: More padding, text-xl: Larger text */}
-        <button 
+        {/* <button 
           type="button" 
           onClick={handleStartWatching}
           className="bg-cyan-500 hover:bg-cyan-600 text-white font-bold py-4 px-12 rounded-lg transition duration-300 ease-in-out shadow-2xl text-xl w-full sm:w-80"
         >
           START WATCHING
-        </button>
+        </button> */}
+        <button   onClick={handleStartWatching} type="button" class="btn btn-outline-primary"> START WATCHING </button>
       </div>
     </div>
   );
