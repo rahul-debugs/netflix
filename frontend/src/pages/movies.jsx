@@ -1,3 +1,5 @@
+
+
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
@@ -6,7 +8,7 @@ import caroserimage1 from "../assets/caroserimage1.jpg";
 import caroserimage2 from "../assets/caroserimage2.jpg";
 import caroserimage3 from "../assets/caroserimage4.jpg";
 
-// 🎬 Movie Cards Images
+// 🎬 English Movie Cards
 import moviecard1 from "../assets/moviecard1.jpg";
 import moviecard2 from "../assets/moviecard2.jpg";
 import moviecard3 from "../assets/moviecard3.jpg";
@@ -16,8 +18,19 @@ import moviecard6 from "../assets/moviecard6.jpg";
 import moviecard7 from "../assets/moviecard7.jpg";
 import moviecard8 from "../assets/moviecard8.jpg";
 
+// 🎬 Tamil  Movie Cards
+import moviestamil1 from "../assets/movietamil1.jpg";
+import moviestamil2 from "../assets/movietamil2.jpg";
+import moviestamil3 from "../assets/movietamil3.jpg";
+import moviestamil4 from "../assets/movietamil4.jpg";
+import moviestamil5 from "../assets/movietamil5.jpg";
+import moviestamil6 from "../assets/movietamil6.jpg";
+import moviestamil7 from "../assets/movietamil7.jpg";
+import moviestamil8 from "../assets/movietamil8.jpg";
+
 function TrendingMoviesCarousel() {
-  const movies = [
+  // ================= ENGLISH MOVIES =================
+  const englishMovies = [
     {
       id: 1,
       title: "Anime Saga",
@@ -25,7 +38,7 @@ function TrendingMoviesCarousel() {
         "A breathtaking journey through different anime worlds where heroes from every universe unite.",
       img: caroserimage1,
       details:
-        "Anime Saga is a crossover adventure blending popular anime universes into one epic story. Follow legendary characters as they confront a cosmic threat that could erase all anime worlds. Filled with stunning visuals, emotional storytelling, and heroic battles, it’s a celebration of anime culture that fans will love.",
+        "Anime Saga is a crossover adventure blending popular anime universes into one epic story...",
     },
     {
       id: 2,
@@ -34,7 +47,7 @@ function TrendingMoviesCarousel() {
         "When the world’s most dangerous agent returns from retirement, chaos follows in every step.",
       img: caroserimage2,
       details:
-        "‘Action Reloaded’ follows Jack Cross, a former black-ops agent pulled back into the field after a global terrorist network resurfaces. Explosions, car chases, and intense close-quarter fights fill this adrenaline-packed thriller — a must-watch for fans of Mission Impossible and John Wick.",
+        "‘Action Reloaded’ follows Jack Cross, a former black-ops agent pulled back into the field...",
     },
     {
       id: 3,
@@ -43,7 +56,7 @@ function TrendingMoviesCarousel() {
         "The classic birds return with more humor, more explosions, and brand-new enemies to defeat.",
       img: caroserimage3,
       details:
-        "The birds are back in their most chaotic adventure yet! When a mysterious energy crystal lands on Bird Island, it triggers new powers and old rivalries. Packed with hilarious moments and vibrant animation, ‘Angry Birds Reloaded’ is fun for all ages and full of family-friendly comedy.",
+        "The birds are back in their most chaotic adventure yet! When a mysterious energy crystal lands...",
     },
     {
       id: 4,
@@ -52,7 +65,7 @@ function TrendingMoviesCarousel() {
         "Ordinary people risk everything in deadly childhood games for a life-changing prize.",
       img: moviecard1,
       details:
-        "The global sensation returns — this time with even higher stakes. ‘Squid Game’ explores the darkest corners of human greed and desperation as contestants compete in deadly children’s games for a massive cash prize. The show questions morality, survival, and the cost of hope.",
+        "The global sensation returns — this time with even higher stakes...",
     },
     {
       id: 5,
@@ -61,7 +74,7 @@ function TrendingMoviesCarousel() {
         "A young Peter Parker faces new challenges balancing high school, love, and superhero duty.",
       img: moviecard2,
       details:
-        "In ‘The Amazing Spiderman,’ Peter uncovers hidden truths about his parents while battling new villains in New York City. With groundbreaking visuals and emotional storytelling, this version of Spiderman captures the struggle of being a hero and a teenager at the same time.",
+        "In ‘The Amazing Spiderman,’ Peter uncovers hidden truths about his parents...",
     },
     {
       id: 6,
@@ -70,7 +83,7 @@ function TrendingMoviesCarousel() {
         "A powerful story of courage, family, and destiny that has touched hearts for generations.",
       img: moviecard4,
       details:
-        "Disney’s ‘The Lion King’ follows Simba’s journey from a playful cub to the rightful king of the Pride Lands. With breathtaking visuals, unforgettable music, and emotional depth, it remains one of the most beloved animated movies of all time — a timeless tale of love, loss, and leadership.",
+        "Disney’s ‘The Lion King’ follows Simba’s journey from a playful cub...",
     },
     {
       id: 7,
@@ -79,7 +92,7 @@ function TrendingMoviesCarousel() {
         "When a journalist bonds with an alien symbiote, he becomes something far more dangerous.",
       img: moviecard5,
       details:
-        "Eddie Brock’s life takes a dark turn when he merges with Venom — an alien symbiote with incredible powers and a violent personality. Together, they form an unlikely partnership to survive a sinister conspiracy. Filled with dark humor and thrilling action, ‘Venom’ redefines antihero storytelling.",
+        "Eddie Brock’s life takes a dark turn when he merges with Venom...",
     },
     {
       id: 8,
@@ -88,28 +101,87 @@ function TrendingMoviesCarousel() {
         "A fearless crime family rises from the streets of Birmingham to control an empire.",
       img: moviecard6,
       details:
-        "Set in post-World War I England, ‘Peaky Blinders’ follows Thomas Shelby and his ruthless gang as they climb the ranks of power. Known for its intense drama, sharp suits, and iconic music, it’s a masterclass in storytelling about ambition, loyalty, and betrayal.",
-    },
-    {
-      id: 9,
-      title: "Avengers: Endgame",
-      description:
-        "Earth’s mightiest heroes assemble for one final battle to save the universe.",
-      img: moviecard7,
-      details:
-        "After the devastating events of Infinity War, the Avengers unite for their last stand against Thanos. ‘Endgame’ is an emotional and action-packed conclusion to a decade-long Marvel saga, delivering epic battles, heartfelt moments, and a powerful message about sacrifice and unity.",
-    },
-    {
-      id: 10,
-      title: "Iron Man",
-      description:
-        "A genius billionaire builds a high-tech suit and becomes the world’s first armored hero.",
-      img: moviecard8,
-      details:
-        "Tony Stark’s journey from arrogant inventor to selfless hero began with ‘Iron Man.’ This iconic Marvel film introduced the world to a new kind of superhero — one powered by intelligence, innovation, and heart. A must-watch for fans of technology and heroism.",
+        "Set in post-World War I England, ‘Peaky Blinders’ follows Thomas Shelby...",
     },
   ];
 
+  // ================= MALAYALAM MOVIES =================
+  const malayalamMovies = [
+    {
+      id: 1,
+      title: "2018",
+      description:
+        "A gripping survival story inspired by Kerala floods, showcasing unity and resilience.",
+      img:  moviestamil1,
+      details:
+        "‘2018’ is a stunning survival drama depicting the real-life Kerala floods...",
+    },
+    {
+      id: 2,
+      title: "Manjummel Boys",
+      description:
+        "A true story of friendship and courage set in the mysterious caves of Kodaikanal.",
+      img:  moviestamil2,
+      details:
+        "‘Manjummel Boys’ captures the thrilling rescue mission of a group of friends...",
+    },
+    {
+      id: 3,
+      title: "Premalu",
+      description:
+        "A light-hearted romantic comedy about modern relationships and unexpected love.",
+      img:  moviestamil3,
+      details:
+        "‘Premalu’ brings humor, love, and chaos together as two young souls meet in Hyderabad...",
+    },
+    {
+      id: 4,
+      title: "Aavesham",
+      description:
+        "A high-octane action-comedy starring Fahadh Faasil in an unforgettable role.",
+      img:  moviestamil4,
+      details:
+        "‘Aavesham’ follows a quirky gangster whose wild personality changes the lives of college students...",
+    },
+    {
+      id: 5,
+      title: "Rorschach",
+      description:
+        "A psychological thriller about revenge, secrets, and justice with a chilling twist.",
+      img:  moviestamil5,
+      details:
+        "‘Rorschach’ is a mind-bending thriller where a man’s hunt for vengeance uncovers buried truths...",
+    },
+    {
+      id: 6,
+      title: "Bheeshma Parvam",
+      description:
+        "An action-packed family drama about power, loyalty, and betrayal.",
+      img:  moviestamil6,
+      details:
+        "‘Bheeshma Parvam’ stars Mammootty as a powerful patriarch facing family conflicts...",
+    },
+    {
+      id: 7,
+      title: "Kurup",
+      description:
+        "Based on the real-life fugitive Sukumara Kurup, India’s most wanted criminal.",
+      img:  moviestamil7,
+      details:
+        "‘Kurup’ follows the mysterious life of a man who fakes his death to escape justice...",
+    },
+    {
+      id: 8,
+      title: "Kumbalangi Nights",
+      description:
+        "A soulful story of brotherhood, love, and finding meaning in imperfection.",
+      img:  moviestamil8,
+      details:
+        "‘Kumbalangi Nights’ is a beautifully crafted tale of four brothers living in a broken home...",
+    },
+  ];
+
+  // ================= STATES & FUNCTIONS =================
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -118,28 +190,17 @@ function TrendingMoviesCarousel() {
   const handlePlayMovie = () => setIsPlaying(true);
   const handleClosePlayer = () => setIsPlaying(false);
 
-  return (
+  // ================= RENDER SECTION FUNCTION =================
+  const renderMovieSection = (title, movies) => (
     <>
-      {/* 🌀 Carousel Section */}
-      <div className="w-full">
-        <Carousel fade interval={4000} pause="hover">
-          {[caroserimage1, caroserimage2, caroserimage3].map((img, i) => (
-            <Carousel.Item key={i}>
-              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px]">
-                <img src={img} alt={`Slide ${i}`} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-              </div>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </div>
-
-      {/* 🔹 Title Section */}
+      {/* 🔹 Section Title */}
       <div className="text-center my-10">
-        <h1 className="text-3xl md:text-4xl font-bold">Top Movies in English</h1>
+        <h1 className="text-3xl md:text-4xl font-bold">{title}</h1>
         <p className="mt-2 text-sm md:text-base">
           Discover the{" "}
-          <mark className="bg-yellow-400 text-black px-1 rounded">most trending</mark>{" "}
+          <mark className="bg-yellow-400 text-black px-1 rounded">
+            most trending
+          </mark>{" "}
           films everyone is watching right now.
         </p>
       </div>
@@ -160,7 +221,9 @@ function TrendingMoviesCarousel() {
             </div>
 
             <div className="p-3 text-center">
-              <h5 className="text-sm sm:text-base font-semibold">{movie.title}</h5>
+              <h5 className="text-sm sm:text-base font-semibold">
+                {movie.title}
+              </h5>
               <p className="text-xs sm:text-sm text-gray-300 mt-1 line-clamp-2">
                 {movie.description}
               </p>
@@ -174,6 +237,34 @@ function TrendingMoviesCarousel() {
           </div>
         ))}
       </div>
+    </>
+  );
+
+  return (
+    <>
+      {/* 🌀 Carousel Section */}
+      <div className="w-full">
+        <Carousel fade interval={4000} pause="hover">
+          {[caroserimage1, caroserimage2, caroserimage3].map((img, i) => (
+            <Carousel.Item key={i}>
+              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px]">
+                <img
+                  src={img}
+                  alt={`Slide ${i}`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+
+      {/* English Movies Section */}
+      {renderMovieSection("Top Movies in English", englishMovies)}
+
+      {/* Malayalam Movies Section */}
+      {renderMovieSection("Top Tamil Movies", malayalamMovies)}
 
       {/* 🎞 Movie Details Modal */}
       {selectedMovie && (
@@ -222,9 +313,13 @@ function TrendingMoviesCarousel() {
             >
               &times;
             </button>
-            <h3 className="text-2xl font-semibold mb-4">🎬 {selectedMovie?.title}</h3>
+            <h3 className="text-2xl font-semibold mb-4">
+              🎬 {selectedMovie?.title}
+            </h3>
             <div className="w-full h-64 bg-black flex items-center justify-center rounded-lg border border-gray-700">
-              <p className="text-red-500 text-lg font-semibold">🚧 Server Busy! Please try again later.</p>
+              <p className="text-red-500 text-lg font-semibold">
+                🚧 Server Busy! Please try again later.
+              </p>
             </div>
           </div>
         </div>
@@ -234,3 +329,4 @@ function TrendingMoviesCarousel() {
 }
 
 export default TrendingMoviesCarousel;
+
