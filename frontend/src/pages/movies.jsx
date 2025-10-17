@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
@@ -17,8 +15,10 @@ import moviecard5 from "../assets/moviecard5.jpg";
 import moviecard6 from "../assets/moviecard6.jpg";
 import moviecard7 from "../assets/moviecard7.jpg";
 import moviecard8 from "../assets/moviecard8.jpg";
+import moviecard9 from "../assets/moviecard9.jpg";
+import moviecard10 from "../assets/moviecard10.jpg";
 
-// 🎬 Tamil  Movie Cards
+// 🎬 Tamil Movie Cards
 import moviestamil1 from "../assets/movietamil1.jpg";
 import moviestamil2 from "../assets/movietamil2.jpg";
 import moviestamil3 from "../assets/movietamil3.jpg";
@@ -27,6 +27,19 @@ import moviestamil5 from "../assets/movietamil5.jpg";
 import moviestamil6 from "../assets/movietamil6.jpg";
 import moviestamil7 from "../assets/movietamil7.jpg";
 import moviestamil8 from "../assets/movietamil8.jpg";
+
+// Top Malayam Movies
+
+import malayamovie1 from "../assets/malayamovie1.jpg";
+import malayamovie2 from "../assets/malayamovie2.jpg";
+import malayamovie3 from "../assets/malayamovie3.jpg";
+import malayamovie4 from "../assets/malayamovie4.jpg";
+import malayamovie5 from "../assets/malayamovie5.jpg";
+import malayamovie6 from "../assets/malayamovie6.jpg";
+import malayamovie7 from "../assets/malayamovie7.jpg";
+import malayamovie8 from "../assets/malayamovie8.jpg";
+
+
 
 function TrendingMoviesCarousel() {
   // ================= ENGLISH MOVIES =================
@@ -96,92 +109,190 @@ function TrendingMoviesCarousel() {
     },
     {
       id: 8,
+      title: "Glass",
+      description:
+        "A fear crime family rises from the streets of Birmingham to control an empire.",
+      img: moviecard6,
+      details:
+        "Set in post-World War I England, ‘Glass’ follows Thomas Shelby...",
+    },
+    {
+      id: 9,
+      title: "Get Out",
+      description:
+        "A fearless crime family rises from the streets of Birmingham to control an empire.",
+      img: moviecard9,
+      details:
+        "Set in post-World War I England, ‘Get Out’ follows Thomas Shelby...",
+    },{
+      id: 10,
       title: "Peaky Blinders",
       description:
         "A fearless crime family rises from the streets of Birmingham to control an empire.",
-      img: moviecard6,
+      img: moviecard10,
       details:
         "Set in post-World War I England, ‘Peaky Blinders’ follows Thomas Shelby...",
-    },
+    }
   ];
 
-  // ================= MALAYALAM MOVIES =================
-  const malayalamMovies = [
+
+  // ================= TAMIL MOVIES =================
+  const tamilMovies = [
     {
       id: 1,
-      title: "2018",
+      title: "Vikram",
       description:
         "A gripping survival story inspired by Kerala floods, showcasing unity and resilience.",
-      img:  moviestamil1,
+      img: moviestamil1,
       details:
         "‘2018’ is a stunning survival drama depicting the real-life Kerala floods...",
     },
     {
       id: 2,
-      title: "Manjummel Boys",
+      title: "Makan",
       description:
         "A true story of friendship and courage set in the mysterious caves of Kodaikanal.",
-      img:  moviestamil2,
+      img: moviestamil2,
       details:
         "‘Manjummel Boys’ captures the thrilling rescue mission of a group of friends...",
     },
     {
       id: 3,
-      title: "Premalu",
+      title: "Good Bad Ugly",
       description:
         "A light-hearted romantic comedy about modern relationships and unexpected love.",
-      img:  moviestamil3,
+      img: moviestamil3,
       details:
         "‘Premalu’ brings humor, love, and chaos together as two young souls meet in Hyderabad...",
     },
     {
       id: 4,
-      title: "Aavesham",
+      title: "Dragon",
       description:
         "A high-octane action-comedy starring Fahadh Faasil in an unforgettable role.",
-      img:  moviestamil4,
+      img: moviestamil4,
       details:
         "‘Aavesham’ follows a quirky gangster whose wild personality changes the lives of college students...",
     },
     {
       id: 5,
-      title: "Rorschach",
+      title: "Lucky Bhaskar",
       description:
         "A psychological thriller about revenge, secrets, and justice with a chilling twist.",
-      img:  moviestamil5,
+      img: moviestamil5,
       details:
         "‘Rorschach’ is a mind-bending thriller where a man’s hunt for vengeance uncovers buried truths...",
     },
     {
       id: 6,
-      title: "Bheeshma Parvam",
+      title: "Master",
       description:
         "An action-packed family drama about power, loyalty, and betrayal.",
-      img:  moviestamil6,
+      img: moviestamil6,
       details:
         "‘Bheeshma Parvam’ stars Mammootty as a powerful patriarch facing family conflicts...",
     },
     {
       id: 7,
-      title: "Kurup",
+      title: "Retro",
       description:
         "Based on the real-life fugitive Sukumara Kurup, India’s most wanted criminal.",
-      img:  moviestamil7,
+      img: moviestamil7,
       details:
         "‘Kurup’ follows the mysterious life of a man who fakes his death to escape justice...",
     },
     {
       id: 8,
-      title: "Kumbalangi Nights",
+      title: "Coolie",
       description:
         "A soulful story of brotherhood, love, and finding meaning in imperfection.",
-      img:  moviestamil8,
+      img: moviestamil8,
       details:
         "‘Kumbalangi Nights’ is a beautifully crafted tale of four brothers living in a broken home...",
     },
   ];
 
-  // ================= STATES & FUNCTIONS =================
+
+  // malayamovies
+
+   const malayaMovies = [
+    {
+      id: 1,
+      title: "Loka",
+      description:
+        "A gripping survival story inspired by Kerala floods, showcasing unity and resilience.",
+      img: malayamovie1,
+      details:
+        "‘2018’ is a stunning survival drama depicting the real-life Kerala floods...",
+    },
+    {
+      id: 2,
+      title: "Aavesham",
+      description:
+        "A true story of friendship and courage set in the mysterious caves of Kodaikanal.",
+      img: malayamovie2,
+      details:
+        "‘Manjummel Boys’ captures the thrilling rescue mission of a group of friends...",
+    },
+    {
+      id: 3,
+      title: "Falimy",
+      description:
+        "A light-hearted romantic comedy about modern relationships and unexpected love.",
+      img: malayamovie3,
+      details:
+        "‘Premalu’ brings humor, love, and chaos together as two young souls meet in Hyderabad...",
+    },
+    {
+      id: 4,
+      title: "Fight Club",
+      description:
+        "A high-octane action-comedy starring Fahadh Faasil in an unforgettable role.",
+      img: malayamovie4,
+      details:
+        "‘Aavesham’ follows a quirky gangster whose wild personality changes the lives of college students...",
+    },
+    {
+      id: 5,
+      title: "12 th pass",
+      description:
+        "A psychological thriller about revenge, secrets, and justice with a chilling twist.",
+      img: malayamovie5,
+      details:
+        "‘Rorschach’ is a mind-bending thriller where a man’s hunt for vengeance uncovers buried truths...",
+    },
+    {
+      id: 6,
+      title: "Manjummel boys",
+      description:
+        "An action-packed family drama about power, loyalty, and betrayal.",
+      img: malayamovie6,
+      details:
+        "‘Bheeshma Parvam’ stars Mammootty as a powerful patriarch facing family conflicts...",
+    },
+       {
+      id: 7,
+      title: "Premalu",
+      description:
+        "An action-packed family drama about power, loyalty, and betrayal.",
+      img: malayamovie7,
+      details:
+        "‘Bheeshma Parvam’ stars Mammootty as a powerful patriarch facing family conflicts...",
+    },
+       {
+      id: 8,
+      title: "Bheeshma Parvam",
+      description:
+        "An action-packed family drama about power, loyalty, and betrayal.",
+      img: malayamovie8,
+      details:
+        "‘Bheeshma Parvam’ stars Mammootty as a powerful patriarch facing family conflicts...",
+    }
+
+    
+  ];
+
+  // ================= STATES =================
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -190,10 +301,9 @@ function TrendingMoviesCarousel() {
   const handlePlayMovie = () => setIsPlaying(true);
   const handleClosePlayer = () => setIsPlaying(false);
 
-  // ================= RENDER SECTION FUNCTION =================
-  const renderMovieSection = (title, movies) => (
+  // ================= ENGLISH MOVIES (GRID) =================
+  const renderEnglishSection = (title, movies) => (
     <>
-      {/* 🔹 Section Title */}
       <div className="text-center my-10">
         <h1 className="text-3xl md:text-4xl font-bold">{title}</h1>
         <p className="mt-2 text-sm md:text-base">
@@ -205,7 +315,6 @@ function TrendingMoviesCarousel() {
         </p>
       </div>
 
-      {/* 🎬 Movie Cards */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 px-4 my-8">
         {movies.map((movie) => (
           <div
@@ -240,6 +349,47 @@ function TrendingMoviesCarousel() {
     </>
   );
 
+  // ================= TAMIL MOVIES (HORIZONTAL SCROLL) =================
+  const renderTamilSection = (title, movies) => (
+    <>
+      <div className="flex justify-between items-center px-6 mt-10">
+        <h1 className="text-3xl md:text-4xl font-bold">{title}</h1>
+        <p className="text-sm text-gray-400">Swipe to explore →</p>
+      </div>
+
+      <div className="overflow-x-auto px-6 py-6">
+        <div className="flex space-x-4 snap-x snap-mandatory overflow-y-hidden scrollbar-hide">
+          {movies.map((movie) => (
+            <div
+              key={movie.id}
+              className="min-w-[180px] sm:min-w-[220px] md:min-w-[250px] bg-gray-900 text-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform duration-300 snap-start"
+            >
+              <div className="w-full h-44 sm:h-52 overflow-hidden">
+                <img
+                  src={movie.img}
+                  alt={movie.title}
+                  className="w-full h-full object-cover object-center"
+                />
+              </div>
+
+              <div className="p-3 text-center">
+                <h5 className="text-sm sm:text-base font-semibold">
+                  {movie.title}
+                </h5>
+                <button
+                  onClick={() => handleWatchNow(movie)}
+                  className="bg-blue-600 hover:bg-blue-500 text-xs sm:text-sm px-3 py-1.5 rounded mt-2"
+                >
+                  Watch Now
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
+
   return (
     <>
       {/* 🌀 Carousel Section */}
@@ -261,10 +411,15 @@ function TrendingMoviesCarousel() {
       </div>
 
       {/* English Movies Section */}
-      {renderMovieSection("Top Movies in English", englishMovies)}
+      {renderEnglishSection("Top Movies in English", englishMovies)}
 
-      {/* Malayalam Movies Section */}
-      {renderMovieSection("Top Tamil Movies", malayalamMovies)}
+      {/* Tamil Movies Section (Horizontal Scroll) */}
+      {renderTamilSection("Top Tamil Movies", tamilMovies)}
+
+            {/* malaya Movies Section (Horizontal Scroll) */}
+                  {renderTamilSection("Top Tamil Movies",  malayaMovies)}
+
+
 
       {/* 🎞 Movie Details Modal */}
       {selectedMovie && (
@@ -329,4 +484,3 @@ function TrendingMoviesCarousel() {
 }
 
 export default TrendingMoviesCarousel;
-
