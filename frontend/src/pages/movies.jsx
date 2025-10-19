@@ -39,6 +39,21 @@ import malayamovie6 from "../assets/malayamovie6.jpg";
 import malayamovie7 from "../assets/malayamovie7.jpg";
 import malayamovie8 from "../assets/malayamovie8.jpg";
 
+// Top webseries ALl time
+
+import movieweb0 from "../assets/movieweb0.jpg";
+import movieweb1 from "../assets/movieweb1.jpg";
+import movieweb2 from "../assets/movieweb2.jpg";
+import movieweb3 from "../assets/movieweb3.jpg";
+import movieweb4 from "../assets/movieweb4.jpg";
+import movieweb5 from "../assets/movieweb5.jpg";
+import movieweb6 from "../assets/movieweb6.jpg";
+import movieweb7 from "../assets/movieweb7.jpg";
+import movieweb8 from "../assets/movieweb8.jpg";
+import movieweb9 from "../assets/movieweb9.jpg";
+import movieweb10 from "../assets/movieweb10.jpg";
+
+
 
 
 function TrendingMoviesCarousel() {
@@ -292,6 +307,115 @@ function TrendingMoviesCarousel() {
     
   ];
 
+
+  // top webseries all time
+
+
+ const webseries = [
+    {
+      id: 1,
+      title: "Alice In BorderLand",
+      description:
+        "A gripping survival story inspired by Kerala floods, showcasing unity and resilience.",
+      img: movieweb0,
+      details:
+        "‘2018’ is a stunning survival drama depicting the real-life Kerala floods...",
+    },
+    {
+      id: 2,
+      title: "You",
+      description:
+        "A true story of friendship and courage set in the mysterious caves of Kodaikanal.",
+      img: movieweb1,
+      details:
+        "‘Manjummel Boys’ captures the thrilling rescue mission of a group of friends...",
+    },
+    {
+      id: 3,
+      title: "Will me to Derry",
+      description:
+        "A light-hearted romantic comedy about modern relationships and unexpected love.",
+      img: movieweb2,
+      details:
+        "‘Premalu’ brings humor, love, and chaos together as two young souls meet in Hyderabad...",
+    },
+    {
+      id: 4,
+      title: "Evil",
+      description:
+        "A high-octane action-comedy starring Fahadh Faasil in an unforgettable role.",
+      img: movieweb3,
+      details:
+        "‘Aavesham’ follows a quirky gangster whose wild personality changes the lives of college students...",
+    },
+    {
+      id: 5,
+      title: "Oddity",
+      description:
+        "A psychological thriller about revenge, secrets, and justice with a chilling twist.",
+      img: movieweb4,
+      details:
+        "‘Rorschach’ is a mind-bending thriller where a man’s hunt for vengeance uncovers buried truths...",
+    },
+    {
+      id: 6,
+      title: "Breaking Bad",
+      description:
+        "An action-packed family drama about power, loyalty, and betrayal.",
+      img: movieweb5,
+      details:
+        "‘Bheeshma Parvam’ stars Mammootty as a powerful patriarch facing family conflicts...",
+    },
+    {
+      id: 7,
+      title: "Family Man",
+      description:
+        "Based on the real-life fugitive Sukumara Kurup, India’s most wanted criminal.",
+      img: movieweb6,
+      details:
+        "‘Kurup’ follows the mysterious life of a man who fakes his death to escape justice...",
+    },
+    {
+      id: 8,
+      title: "My Fault",
+      description:
+        "A soulful story of brotherhood, love, and finding meaning in imperfection.",
+      img: movieweb7,
+      details:
+        "‘Kumbalangi Nights’ is a beautifully crafted tale of four brothers living in a broken home...",
+    },
+        {
+      id: 8,
+      title: "Ginny and Georgia",
+      description:
+        "A soulful story of brotherhood, love, and finding meaning in imperfection.",
+      img: movieweb8,
+      details:
+        "‘Kumbalangi Nights’ is a beautifully crafted tale of four brothers living in a broken home...",
+    },
+        {
+      id: 8,
+      title: "The Goat Life",
+      description:
+        "A soulful story of brotherhood, love, and finding meaning in imperfection.",
+      img: movieweb9,
+      details:
+        "‘Kumbalangi Nights’ is a beautifully crafted tale of four brothers living in a broken home...",
+    },
+        {
+      id: 8,
+      title: "The Davinci Code",
+      description:
+        "A soulful story of brotherhood, love, and finding meaning in imperfection.",
+      img: movieweb10,
+      details:
+        "‘Kumbalangi Nights’ is a beautifully crafted tale of four brothers living in a broken home...",
+    }
+  ];
+
+
+
+
   // ================= STATES =================
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -417,8 +541,12 @@ function TrendingMoviesCarousel() {
       {renderTamilSection("Top Tamil Movies", tamilMovies)}
 
             {/* malaya Movies Section (Horizontal Scroll) */}
-                  {renderTamilSection("Top Tamil Movies",  malayaMovies)}
+                  {renderTamilSection("Top Malaya Movies",  malayaMovies)}
 
+                  {/* top webseries for all time */}
+
+            {/* malaya Movies Section (Horizontal Scroll) */}
+                  {renderTamilSection("Top Webseries For All Time",  webseries)}
 
 
       {/* 🎞 Movie Details Modal */}
