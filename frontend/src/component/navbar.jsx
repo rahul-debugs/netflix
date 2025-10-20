@@ -6,9 +6,9 @@ const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
   { name: "Movies", href: "/movies" },
-  { name: "TV Shows", href: "#" },
-  { name: "Live", href: "#" },
-  { name: "Subscription", href: "#" },
+  { name: "TV Shows", href: "/tvshow" },
+  { name: "Live", href: "/live" },
+  { name: "Subscription", href: "/subscription" },
 ];
 
 function Navbars() {

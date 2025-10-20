@@ -3,7 +3,11 @@ import Auth from "./pages/auth";
 import Navbars from "./component/navbar";
 import Wel from "./pages/welcome";
 import Movies from "./pages/movies";
-// import Footer from "./footer";
+import About from "./pages/about";
+import Footer from "./footer";
+import Live from "./pages/live";
+import Tvshow from "./pages/tvshow";
+import Subscription from "./pages/subscription";
 
 
 function App() {
@@ -15,8 +19,12 @@ function App() {
       <Route path="/" element={<Wel />} />
       <Route path="/auth" element={<Auth />} />
       <Route path="/movies" element={<Movies />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/live" element={<Live />} />
+      <Route path="/tvshow" element={<Tvshow />} />
+      <Route path="/subscription" element={<Subscription/>} />
     </Routes>
-{/* <Footer/> */}
+<Footer/> 
   </BrowserRouter>
 </>
   
