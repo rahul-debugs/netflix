@@ -3,7 +3,7 @@ import Auth from "./pages/auth";
 import Navbars from "./component/navbar";
 import Wel from "./pages/welcome";
 import Movies from "./pages/movies";
-import Footer from "./footer";
+// import Footer from "./footer";
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <Route path="/auth" element={<Auth />} />
       <Route path="/movies" element={<Movies />} />
     </Routes>
-<Footer/>
+{/* <Footer/> */}
   </BrowserRouter>
 </>
   

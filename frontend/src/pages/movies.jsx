@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
+
 // 🖼 Carousel Images
 import caroserimage1 from "../assets/caroserimage1.jpg";
 import caroserimage2 from "../assets/caroserimage2.jpg";
@@ -607,6 +608,7 @@ function TrendingMoviesCarousel() {
           </div>
         </div>
       )}
+    
     </>
   );
 }
