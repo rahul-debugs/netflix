@@ -14,6 +14,11 @@ import caroserimage7 from "../assets/tvshows/movecard2.jpg";
 import caroserimage8 from "../assets/tvshows/movecard3.jpg";
 import caroserimage9 from "../assets/tvshows/moviecard4.jpg";
 import caroserimage10 from "../assets/tvshows/moviecard5.jpg";
+import caroserimage11 from "../assets/tvshows/moviecard6.jpg";
+import caroserimage12 from "../assets/tvshows/moviecard7.jpg";
+import caroserimage13 from "../assets/tvshows/moviecard8.jpg";
+import caroserimage14 from "../assets/tvshows/moviecard9.jpg";
+import caroserimage15 from "../assets/tvshows/moviecard10.jpg";
 
 
 // 🎞️ Movie Card Component
@@ -141,6 +146,36 @@ function Tvshow() {
   description:
     "In the high-stakes world of law and corporate drama, a brilliant lawyer must outsmart rivals while juggling personal ambitions and moral dilemmas.",
   image: caroserimage10,
+},
+{
+  title: "Harry Potter",
+  description:
+    "Join Harry Potter as he discovers his magical heritage, battles dark forces, and uncovers the mysteries of Hogwarts School of Witchcraft and Wizardry.",
+  image: caroserimage11,
+},
+{
+  title: "The Wolverine",
+  description:
+    "Follow Wolverine on a gripping journey of revenge, redemption, and self-discovery, as he battles enemies with his unmatched healing powers and adamantium claws.",
+  image: caroserimage12,
+},
+{
+  title: "Avengers: Age Of Ultron",
+  description:
+    "Earth’s mightiest heroes unite to stop the rogue AI, Ultron, from unleashing global destruction, testing their teamwork and resilience to the limit.",
+  image: caroserimage13,
+},
+{
+  title: "Moon Knight",
+  description:
+    "Dive into the mysterious world of Moon Knight, a vigilante with multiple identities, as he fights crime and confronts his inner demons in a dark and thrilling adventure.",
+  image: caroserimage15,
+},
+{
+  title: "Loki",
+  description:
+    "Follow the mischievous god Loki as he navigates time-traveling chaos, faces alternate realities, and plots his way through unpredictable adventures across the multiverse.",
+  image: caroserimage14,
 },
 
   ];
