@@ -19,6 +19,17 @@ import caroserimage12 from "../assets/tvshows/moviecard7.jpg";
 import caroserimage13 from "../assets/tvshows/moviecard8.jpg";
 import caroserimage14 from "../assets/tvshows/moviecard9.jpg";
 import caroserimage15 from "../assets/tvshows/moviecard10.jpg";
+// animes
+
+import caroserimage16 from "../assets/tvshows/anime1.jpg";
+import caroserimage17 from "../assets/tvshows/anime2.jpg";
+import caroserimage18 from "../assets/tvshows/anime3.jpg";
+import caroserimage19 from "../assets/tvshows/anime4.jpg";
+import caroserimage20 from "../assets/tvshows/anime5.jpg";
+import caroserimage21 from "../assets/tvshows/anime6.jpg";
+import caroserimage22 from "../assets/tvshows/anime7.jpg";
+import caroserimage23 from "../assets/tvshows/anime8.jpg";
+
 
 
 // 🎞️ Movie Card Component
@@ -180,6 +191,54 @@ function Tvshow() {
 
   ];
 
+// the anime can be created
+
+
+const amovies = [
+  {
+    title: "Naruto",
+    description:
+      "Follow Naruto Uzumaki and the legendary Nine-Tails, Kurama, as they battle enemies and chase the dream of becoming Hokage.",
+    image: caroserimage16,
+  },
+  {
+    title: "Jujutsu Kaisen: Sukuna's Wrath",
+    description:
+      "Ryomen Sukuna, the King of Curses, awakens within Yuji Itadori, unleashing chaos in the world of sorcerers.",
+    image: caroserimage19,
+  },
+  {
+    title: "Jujutsu Kaisen",
+    description:
+      "Yuji Itadori joins Tokyo Jujutsu High to fight curses alongside Megumi and Nobara, uncovering dark secrets and deadly powers.",
+    image: caroserimage18,
+  },
+  {
+    title: "Demon Slayer",
+    description:
+      "Tanjiro Kamado and his sister Nezuko battle demons in a breathtaking journey of vengeance, hope, and sibling love.",
+    image: caroserimage20,
+  },
+  {
+    title: "Tokyo Revengers",
+    description:
+      "Takemichi travels back in time to save his friends and rewrite the violent history of Tokyo's toughest gangs.",
+    image: caroserimage21,
+  },
+  {
+    title: "Dragon Ball x My Hero Academia",
+    description:
+      "Goku unleashes Ultra Instinct while Bakugo explodes into action—two worlds collide in a high-octane crossover of power and pride.",
+    image: caroserimage22,
+  },
+  {
+    title: "One Piece",
+    description:
+      "Monkey D. Luffy sets sail with his crew to find the legendary One Piece and become the Pirate King, defying fate and foes.",
+    image: caroserimage23,
+  },
+];
+
   const [selectedMovie, setSelectedMovie] = useState(null);
   const [showServerBusy, setShowServerBusy] = useState(false);
 
@@ -303,6 +362,47 @@ function Tvshow() {
           <MovieCard key={index} movie={movie} onWatchNow={handleWatchNow} />
         ))}
       </div>
+
+
+      {/* the Anime section headings */}
+<section className="my-12 text-center">
+  <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+    <span className="text-transparent bg-clip-text bg-gradient-to-r to-purple-600 from-pink-400 lightning-effect">
+      Top Picks
+    </span>{" "}
+    Most Favorite Animes
+  </h1>
+  <p className="mx-auto text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 max-w-3xl">
+    Explore thrilling adventures, epic battles, and unforgettable characters in these must-watch anime favorites.
+  </p>
+</section>
+
+{/* the animie section */}
+
+
+  <div className="w-full">
+        <Carousel fade interval={4000} pause="hover">
+          {[caroserimage16, caroserimage17, caroserimage18].map((img, i) => (
+            <Carousel.Item key={i}>
+              <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[550px]">
+                <img
+                  src={img}
+                  alt={`Slide ${i}`}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </div>
+
+<div className="flex flex-wrap justify-center gap-6 p-6 bg-gray-100 dark:bg-gray-900">
+        {amovies.map((movie, index) => (
+          <MovieCard key={index} movie={movie} onWatchNow={handleWatchNow} />
+        ))}
+      </div>
+
     </>
   );
 }
