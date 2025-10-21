@@ -43,6 +43,7 @@ function Tvshow() {
   ];
 
   return (
+    <>
     <div className="w-full">
       <Carousel fade interval={5000} pause="hover">
         {slides.map((slide, i) => (
@@ -85,6 +86,20 @@ function Tvshow() {
         ))}
       </Carousel>
     </div>
+
+    {/* the heading  */}
+
+    <div className="text-center py-12 px-4 md:px-8">
+  <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+    Get Back to Growth with <span className="text-blue-600 dark:text-blue-500">the World’s #1 Streaming Experience</span>
+  </h1>
+  <p className="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
+    Here at <span className="font-semibold text-gray-900 dark:text-white">NetStream</span>, we focus on delivering entertainment where technology, innovation, and creativity unlock new stories, experiences, and growth for our viewers worldwide.
+  </p>
+</div>
+
+
+    </>
   );
 }
 

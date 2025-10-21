@@ -9,6 +9,7 @@ const navItems = [
   { name: "TV Shows", href: "/tvshow" },
   { name: "Live", href: "/live" },
   { name: "Subscription", href: "/subscription" },
+  { name: "Watchlist", href: "/subscription" },
 ];
 
 function Navbars() {
@@ -16,6 +17,7 @@ function Navbars() {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
+    <>
     <nav className="bg-gray-900 text-white shadow-lg fixed top-0 w-full z-10 border-b border-gray-700">
       {/* 🔧 Inline style reset — removes blue color & underline only for this navbar */}
       <style>
@@ -112,6 +114,10 @@ function Navbars() {
         </div>
       </div>
     </nav>
+
+   
+
+    </>
   );
 }
 
