@@ -8,7 +8,7 @@ const navItems = [
   { name: "TV Shows", href: "/tvshow" },
   { name: "Live", href: "/live" },
   { name: "Subscription", href: "/subscription" },
-  { name: "Watchlist", href: "/subscription" },
+  { name: "Watchlist", href: "/watchlist" },
   { name: "About", href: "/about" },
 ];
 
