@@ -507,6 +507,9 @@ function TrendingMoviesCarousel() {
                 >
                   Watch Now
                 </button>
+
+              
+
               </div>
             </div>
           ))}
