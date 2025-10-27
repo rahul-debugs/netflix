@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Movies", href: "/movies" },
   { name: "TV Shows", href: "/tvshow" },
+  { name: "Movies", href: "/movies" },
   { name: "Live", href: "/live" },
   { name: "Subscription", href: "/subscription" },
   { name: "Watchlist", href: "/watchlist" },
