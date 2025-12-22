@@ -25,7 +25,7 @@ function Wel() {
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/30"></div>
 
       {/* 3. CONTENT AREA: Left-aligned and responsive */}
-      <div className="relative z-10 text-white text-left w-full max-w-xl md:max-w-2xl mx-auto md:mx-0">
+      <div className="relative  text-white text-left w-full max-w-xl md:max-w-2xl mx-auto md:mx-0">
         
         {/* H1 Title: Larger font sizes and heavier weight for impact */}
         {/* text-5xl on mobile, md:text-7xl (huge) on desktop. font-extrabold: Super bold */}
