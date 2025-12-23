@@ -171,7 +171,8 @@ function Auth() {
       if (res.ok) {
         alert("✅ Login successful!");
         document.cookie = `user=${data.user.email}; path=/`;
-        navigate("/home");
+         navigate("/tvshow");
+        // navigate("/home");
       } else {
         alert(`❌ Login failed: ${data.error || data.message}`);
       }
