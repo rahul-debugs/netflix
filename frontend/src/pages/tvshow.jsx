@@ -71,6 +71,7 @@ function Tvshow() {
       title: "Dream",
       tagline: "Chase the impossible. Believe the unstoppable.",
       desc: "A young athlete battles against destiny, society, and his own fears to become a world champion. ‘Dream’ is an inspiring story of passion, perseverance, and hope that will awaken the fire within you.",
+      
     },
     {
       img: caroserimage2,
@@ -101,92 +102,108 @@ function Tvshow() {
 
   // 🎥 Movie Cards Data & Logic
   const movies = [
-    {
-      title: "Dream",
-      description:
-        "A thrilling adventure of a young hero chasing his dreams against all odds.",
-      image: caroserimage1,
-    },
+ {
+  title: "Dream",
+  description:
+    "A thrilling adventure of a young hero chasing his dreams against all odds.",
+  image: caroserimage1,
+  videoUrl: "7__0V3WHnh4"
+},
+
     {
       title: "Money Heist",
       description: "A brilliant plan. A fearless crew. One impossible mission.",
       image: caroserimage2,
+      videoUrl: "_InqQJRqGW4"
     },
     {
       title: "Squid Game",
       description: "Win or die — the game has no mercy.",
       image: caroserimage3,
+      videoUrl: "oqxAJKy0ii4"
     },
     {
       title: "Upload",
       description:
         "A digital afterlife where love, death, and technology collide.",
       image: caroserimage4,
+      videoUrl: "4OtfjPCJpU0"
     },
     {
       title: "Monster",
       description: "The terrifying true story that inspired generations of horror.",
       image: caroserimage5,
+      videoUrl: "EDBmpfbnLGk"
     },
     {
   title: "Every Thing Every Where All At Once",
   description:
     "An epic multiverse adventure where a seemingly ordinary woman discovers her extraordinary powers and fights to save reality itself.",
   image: caroserimage6,
+  videoUrl: "wxN1T1uxQ2g"
 },
 {
   title: "Ocean Eight",
   description:
     "A glamorous heist unfolds as a team of skilled women plan an audacious theft at New York’s biggest fashion event.",
   image: caroserimage7,
+  videoUrl: "MFWF9dU5Zc0"
 },
 {
   title: "The Menu",
   description:
     "A darkly comedic thriller where a couple visits an exclusive restaurant, only to find the chef’s intentions are far more sinister than a simple meal.",
   image: caroserimage8,
+  videoUrl: "Kx55Rkynhtk"
 },
 {
   title: "Wednesday",
   description:
     "Follow Wednesday Addams as she navigates life at Nevermore Academy, solving mysteries with her signature dark wit and sharp intellect.",
   image: caroserimage9,
+  videoUrl: "ueCc-AYUMRs"
 },
 {
   title: "Suits La",
   description:
     "In the high-stakes world of law and corporate drama, a brilliant lawyer must outsmart rivals while juggling personal ambitions and moral dilemmas.",
   image: caroserimage10,
+  videoUrl: "k13aNEQKawA"
 },
 {
   title: "Harry Potter",
   description:
     "Join Harry Potter as he discovers his magical heritage, battles dark forces, and uncovers the mysteries of Hogwarts School of Witchcraft and Wizardry.",
   image: caroserimage11,
+  videoUrl: "VyHV0BRtdxo"
 },
 {
   title: "The Wolverine",
   description:
     "Follow Wolverine on a gripping journey of revenge, redemption, and self-discovery, as he battles enemies with his unmatched healing powers and adamantium claws.",
   image: caroserimage12,
+  videoUrl: "WEbzZP-_Ssc"
 },
 {
   title: "Avengers: Age Of Ultron",
   description:
     "Earth’s mightiest heroes unite to stop the rogue AI, Ultron, from unleashing global destruction, testing their teamwork and resilience to the limit.",
   image: caroserimage13,
+  videoUrl: "P5iIPfNzj2o"
 },
 {
   title: "Moon Knight",
   description:
     "Dive into the mysterious world of Moon Knight, a vigilante with multiple identities, as he fights crime and confronts his inner demons in a dark and thrilling adventure.",
   image: caroserimage15,
+  videoUrl: "x7Krla_UxRg"
 },
 {
   title: "Loki",
   description:
     "Follow the mischievous god Loki as he navigates time-traveling chaos, faces alternate realities, and plots his way through unpredictable adventures across the multiverse.",
   image: caroserimage14,
+  videoUrl: "nW948Va-l10"
 },
 
   ];
@@ -200,70 +217,98 @@ const amovies = [
     description:
       "Follow Naruto Uzumaki and the legendary Nine-Tails, Kurama, as they battle enemies and chase the dream of becoming Hokage.",
     image: caroserimage16,
+    videoUrl: "G9BqkgZXRA"
   },
   {
     title: "Jujutsu Kaisen: Sukuna's Wrath",
     description:
       "Ryomen Sukuna, the King of Curses, awakens within Yuji Itadori, unleashing chaos in the world of sorcerers.",
     image: caroserimage19,
+    videoUrl: "pkKu9hLT-t8"
   },
   {
     title: "Jujutsu Kaisen",
     description:
       "Yuji Itadori joins Tokyo Jujutsu High to fight curses alongside Megumi and Nobara, uncovering dark secrets and deadly powers.",
     image: caroserimage18,
+    videoUrl: "QIwOE8h0gXg"
   },
   {
     title: "Demon Slayer",
     description:
       "Tanjiro Kamado and his sister Nezuko battle demons in a breathtaking journey of vengeance, hope, and sibling love.",
     image: caroserimage20,
+    videoUrl: "x7uLutVRBfI"
   },
   {
     title: "Tokyo Revengers",
     description:
       "Takemichi travels back in time to save his friends and rewrite the violent history of Tokyo's toughest gangs.",
     image: caroserimage21,
+    videoUrl: "N5FVCA6OdCM"
   },
   {
     title: "Dragon Ball x My Hero Academia",
     description:
       "Goku unleashes Ultra Instinct while Bakugo explodes into action—two worlds collide in a high-octane crossover of power and pride.",
     image: caroserimage22,
+    videoUrl: "FwE87GX3dEc"
   },
   {
     title: "One Piece",
     description:
       "Monkey D. Luffy sets sail with his crew to find the legendary One Piece and become the Pirate King, defying fate and foes.",
     image: caroserimage23,
+    videoUrl: "OBDJgW-TJKc"
   },
 ];
 
   const [selectedMovie, setSelectedMovie] = useState(null);
-  const [showServerBusy, setShowServerBusy] = useState(false);
 
   const handleWatchNow = (movie) => setSelectedMovie(movie);
-  const handlePlay = () => setShowServerBusy(true);
+  // const handlePlay = () => setShowServerBusy(true);  
+  const handlePlay = () => setShowVideo(true);
+
   const handleClose = () => {
     setShowServerBusy(false);
     setSelectedMovie(null);
   };
+  // 
+  const [showVideo, setShowVideo] = useState(false);
 
-  // 🟥 Server Busy Screen
-  if (showServerBusy) {
-    return (
-      <div className="flex flex-col items-center justify-center h-screen bg-gray-900 text-white p-4">
-        <h1 className="text-3xl font-bold mb-4">Server is busy now!</h1>
-        <p className="mb-6">Please try again later.</p>
-        <button
-          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-md font-semibold"
-          onClick={handleClose}
-        >
-          Close
-        </button>
+
+// 🎥 YouTube Player Screen
+if (showVideo && selectedMovie?.videoUrl) {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-4">
+      <div className="w-full h-[85vh] max-w-6xl mb-4">
+        <iframe
+          className="w-full h-full rounded-lg"
+          src={`https://www.youtube.com/embed/${selectedMovie.videoUrl}`}
+          title={selectedMovie.title}
+          frameBorder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
       </div>
-    );
-  }
+
+      <button
+        className="px-6 py-3 bg-red-600 hover:bg-red-700 rounded-md font-semibold"
+        onClick={() => {
+          setShowVideo(false);
+          setSelectedMovie(null);
+        }}
+      >
+        Close
+      </button>
+    </div>
+  );
+}
+
+
+
+
+ 
 
   // 🟨 Selected Movie Page
   if (selectedMovie) {

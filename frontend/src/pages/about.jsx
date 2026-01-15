@@ -4,6 +4,9 @@ import { Users, Rocket, Star, HeartHandshake, HelpCircle } from "lucide-react";
 
 function About() {
   return (
+
+    
+
     <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 flex flex-col items-center px-6 py-16">
       {/* Header Section */}
       <motion.div

@@ -141,21 +141,23 @@ import { useNavigate } from "react-router-dom";
 function Auth() {
   const [isLogin, setIsLogin] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
+
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState("");
+
   const navigate = useNavigate();
 
   const toggleForm = () => {
     setIsLogin(!isLogin);
+    setUsername("");
     setEmail("");
     setPassword("");
-    setFullName("");
   };
 
   const togglePassword = () => setShowPassword(!showPassword);
 
-  // ✅ LOGIN
+  // ================= LOGIN =================
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -163,25 +165,31 @@ function Auth() {
       const res = await fetch("http://127.0.0.1:8000/api/login/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ username, password }),
       });
 
-      const data = await res.json();
+      const text = await res.text();
 
-      if (res.ok) {
-        alert("✅ Login successful!");
-        document.cookie = `user=${data.user.email}; path=/`;
-         navigate("/tvshow");
-        // navigate("/home");
-      } else {
-        alert(`❌ Login failed: ${data.error || data.message}`);
+      let data = {};
+      try {
+        data = JSON.parse(text);
+      } catch {
+        throw new Error("Non-JSON response from server");
       }
-    } catch (error) {
-      alert("❌ Server error. Please try again later.");
+
+      if (data.message === "Login successful") {
+        alert("✅ Login successful");
+        navigate("/tvshow");
+      } else {
+        alert("❌ Invalid credentials");
+      }
+    } catch (err) {
+      console.error(err);
+      alert("❌ Server error during login");
     }
   };
 
-  // ✅ REGISTER
+  // ================= REGISTER =================
   const handleRegister = async (e) => {
     e.preventDefault();
 
@@ -190,25 +198,35 @@ function Auth() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          full_name: fullName,
+          username,
           email,
           password,
         }),
       });
 
-      const data = await res.json();
+      const text = await res.text();
 
-      if (res.ok) {
+      let data = {};
+      try {
+        data = JSON.parse(text);
+      } catch {
+        alert("❌ Backend error (not JSON). Check Django console.");
+        return;
+      }
+
+      if (data.message === "User registered") {
         alert("✅ Registration successful! Please login.");
         setIsLogin(true);
-        setFullName("");
+        setUsername("");
         setEmail("");
         setPassword("");
       } else {
-        alert(`❌ Registration failed: ${data.message}`);
+        alert("❌ Registration failed");
+        console.log("Backend response:", data);
       }
-    } catch (error) {
-      alert("❌ Server error. Please try again later.");
+    } catch (err) {
+      console.error(err);
+      alert("❌ Server error during registration");
     }
   };
 
@@ -217,13 +235,13 @@ function Auth() {
       <div className="bg-black bg-opacity-90 p-10 rounded-md w-full max-w-md">
         {isLogin ? (
           <div>
-            <h1 className="text-3xl font-bold mb-6">Login</h1>
+            <h1 className="text-3xl font-bold mb-6">Sign In</h1>
             <form className="flex flex-col gap-4" onSubmit={handleLogin}>
               <input
-                type="email"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 className="p-3 rounded bg-gray-800"
                 required
               />
@@ -246,29 +264,26 @@ function Auth() {
               </div>
 
               <button className="bg-red-600 py-3 rounded font-bold">
-                Login
+                Sign In
               </button>
             </form>
 
             <p className="mt-4 text-gray-400">
               New to Netflix?{" "}
-              <span
-                onClick={toggleForm}
-                className="text-white cursor-pointer"
-              >
-                Register now
+              <span onClick={toggleForm} className="text-white cursor-pointer">
+                Sign up now
               </span>
             </p>
           </div>
         ) : (
           <div>
-            <h1 className="text-3xl font-bold mb-6">Register</h1>
+            <h1 className="text-3xl font-bold mb-6">Sign Up</h1>
             <form className="flex flex-col gap-4" onSubmit={handleRegister}>
               <input
                 type="text"
                 placeholder="Full Name"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 className="p-3 rounded bg-gray-800"
                 required
               />
@@ -300,17 +315,14 @@ function Auth() {
               </div>
 
               <button className="bg-red-600 py-3 rounded font-bold">
-                Register
+                Sign Up
               </button>
             </form>
 
             <p className="mt-4 text-gray-400">
               Already have an account?{" "}
-              <span
-                onClick={toggleForm}
-                className="text-white cursor-pointer"
-              >
-                Login
+              <span onClick={toggleForm} className="text-white cursor-pointer">
+                Sign In
               </span>
             </p>
           </div>
@@ -321,3 +333,4 @@ function Auth() {
 }
 
 export default Auth;
+

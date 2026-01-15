@@ -32,6 +32,7 @@ function Live() {
       description:
         "Experience top clubs clash in real time — intensity, skill, and passion at its peak.",
       button: "Watch Live",
+      videoUrl:"OBDJgW-TJKc"
     },
     {
       id: 2,
@@ -57,54 +58,57 @@ function Live() {
   const imagesData = {
     "All Categories": [
       // Football
-      { img: cardFootball1, title: "Football Match", time: "6:00 PM", date: "24 Oct 2025" },
-      { img: cardFootball2, title: "Champions League", time: "8:00 PM", date: "24 Oct 2025" },
-      { img: cardFootball3, title: "Tennis Highlights", time: "9:30 PM", date: "24 Oct 2025" },
-      { img: cardFootball4, title: "Soccer Night", time: "11:00 PM", date: "25 Oct 2025" },
-      { img: cardFootball5, title: "Premier League", time: "1:00 AM", date: "25 Oct 2025" },
+      { img: cardFootball1, title: "Football Match", time: "6:00 PM", date: "24 Oct 2026" , videoUrl:"qEBUIlrOVCU" },
+      { img: cardFootball2, title: "Champions League", time: "8:00 PM", date: "24 Oct 2026" , videoUrl: "pS6HH4P1prU"},
+      { img: cardFootball3, title: "Highlights", time: "9:30 PM", date: "24 Oct 2026"  , videoUrl: "cokWfr5zkN8"  },
+      { img: cardFootball4, title: "Soccer Night", time: "11:00 PM", date: "25 Oct 2026" , videoUrl: "9V2guLT3S14" },
+      { img: cardFootball5, title: "Premier League", time: "1:00 AM", date: "25 Oct 2026"  , videoUrl: "cokWfr5zkN8" },
 
       // Music
-      { img: cardMusic1, title: "Global Music Fest", time: "7:00 PM", date: "24 Oct 2025" },
-      { img: cardMusic2, title: "Pop Hits Live", time: "9:00 PM", date: "24 Oct 2025" },
-      { img: cardMusic3, title: "Classical Night", time: "11:30 PM", date: "25 Oct 2025" },
+      { img: cardMusic1, title: "Global Music Fest", time: "7:00 PM", date: "24 Oct 2026"  , videoUrl: "RDqcdH3vSMM6Q&start_radio=1" },
+      { img: cardMusic2, title: "Pop Hits Live", time: "9:00 PM", date: "24 Oct 2026"  , videoUrl: "V_Z1y1GRhpg"},
+      { img: cardMusic3, title: "Classical Night", time: "11:30 PM", date: "25 Oct 2026"  , videoUrl: "https://www.youtube.com/watch?v=I5_BuHWAlnw&list=RDI5_BuHWAlnw&start_radio=1"},
 
       // Cricket
-      { img: cardCricket1, title: "T20 Match Live", time: "4:00 PM", date: "24 Oct 2025" },
-      { img: cardCricket2, title: "World Cup Final", time: "6:00 PM", date: "24 Oct 2025" },
-      { img: cardCricket3, title: "Highlights Show", time: "8:00 PM", date: "24 Oct 2025" },
-      { img: cardCricket4, title: "IPL Live Stream", time: "10:00 PM", date: "25 Oct 2025" },
-      { img: cardCricket5, title: "Match Preview", time: "12:00 AM", date: "25 Oct 2025" },
+      { img: cardCricket1, title: "T20 Match Live", time: "4:00 PM", date: "24 Oct 2026"  , videoUrl: "-aPONfxjk_4"},
+      { img: cardCricket2, title: "World Cup Final", time: "6:00 PM", date: "24 Oct 2026" , videoUrl: "" },
+      { img: cardCricket3, title: "Highlights Show", time: "8:00 PM", date: "24 Oct 2026"  , videoUrl: "YphL3Whh5B0"},
+      { img: cardCricket4, title: "IPL Live Stream", time: "10:00 PM", date: "25 Oct 2026" , videoUrl: "" },
+      { img: cardCricket5, title: "Match Preview", time: "12:00 AM", date: "25 Oct 2026"  , videoUrl: "YphL3Whh5B0"},
 
       // Jockey
-      { img: cardJock1, title: "Racing Live", time: "5:00 PM", date: "24 Oct 2025" },
-      { img: cardJock2, title: "Horse Derby Highlights", time: "7:00 PM", date: "25 Oct 2025" },
+      { img: cardJock1, title: "Racing Live", time: "5:00 PM", date: "24 Oct 2026"  , videoUrl: "Dwp85SvFLDQ"},
+      { img: cardJock2, title: "Horse Derby Highlights", time: "7:00 PM", date: "25 Oct 2026"  , videoUrl: "jMjFbWlZyFs"},
     ],
     "Football Live": [
-      { img: cardFootball1, title: "Football Match", time: "6:00 PM", date: "24 Oct 2025" },
-      { img: cardFootball2, title: "Champions League", time: "8:00 PM", date: "24 Oct 2025" },
-      { img: cardFootball4, title: "Soccer Night", time: "11:00 PM", date: "25 Oct 2025" },
-      { img: cardFootball5, title: "Premier League", time: "1:00 AM", date: "25 Oct 2025" },
+      { img: cardFootball1, title: "Football Match", time: "6:00 PM", date: "24 Oct 2026"  , videoUrl: "iK90daEJEos"},
+      { img: cardFootball2, title: "Champions League", time: "8:00 PM", date: "24 Oct 2026"  , videoUrl: "Aw_OVfYOPMw"},
+      { img: cardFootball4, title: "Soccer Night", time: "11:00 PM", date: "25 Oct 2026"  , videoUrl: "xERy9rpRHgo"},
+      { img: cardFootball5, title: "Premier League", time: "1:00 AM", date: "25 Oct 2026"  , videoUrl: "CiqytGuaoEs"},
     ],
     Music: [
-      { img: cardMusic1, title: "Global Music Fest", time: "7:00 PM", date: "24 Oct 2025" },
-      { img: cardMusic2, title: "Pop Hits Live", time: "9:00 PM", date: "24 Oct 2025" },
-      { img: cardMusic3, title: "Classical Night", time: "11:30 PM", date: "25 Oct 2025" },
+      { img: cardMusic1, title: "Global Music Fest", time: "7:00 PM", date: "24 Oct 2026"  , videoUrl: ""},
+      { img: cardMusic2, title: "Pop Hits Live", time: "9:00 PM", date: "24 Oct 2026"  , videoUrl: ""},
+      { img: cardMusic3, title: "Classical Night", time: "11:30 PM", date: "25 Oct 2026"  , videoUrl: ""},
     ],
     "Cricket Channel": [
-      { img: cardCricket1, title: "T20 Match Live", time: "4:00 PM", date: "24 Oct 2025" },
-      { img: cardCricket2, title: "World Cup Final", time: "6:00 PM", date: "24 Oct 2025" },
-      { img: cardCricket3, title: "Highlights Show", time: "8:00 PM", date: "24 Oct 2025" },
-      { img: cardCricket4, title: "IPL Live Stream", time: "10:00 PM", date: "25 Oct 2025" },
-      { img: cardCricket5, title: "Match Preview", time: "12:00 AM", date: "25 Oct 2025" },
+      { img: cardCricket1, title: "T20 Match Live", time: "4:00 PM", date: "24 Oct 2026"  , videoUrl: ""},
+      { img: cardCricket2, title: "World Cup Final", time: "6:00 PM", date: "24 Oct 2026"  , videoUrl: ""},
+      { img: cardCricket3, title: "Highlights Show", time: "8:00 PM", date: "24 Oct 2026"  , videoUrl: ""},
+      { img: cardCricket4, title: "IPL Live Stream", time: "10:00 PM", date: "25 Oct 2026"  , videoUrl: ""},
+      { img: cardCricket5, title: "Match Preview", time: "12:00 AM", date: "25 Oct 2026"  , videoUrl: ""},
     ],
-    "Jockey Channel": [
-      { img: cardJock1, title: "Racing Live", time: "5:00 PM", date: "24 Oct 2025" },
-      { img: cardJock2, title: "Horse Derby Highlights", time: "7:00 PM", date: "25 Oct 2025" },
+    "Jockes Channel": [
+      { img: cardJock1, title: "Racing Live", time: "5:00 PM", date: "24 Oct 2026"  , videoUrl: ""},
+      { img: cardJock2, title: "Horse Derby Highlights", time: "7:00 PM", date: "25 Oct 2026"  , videoUrl: ""},
     ],
   };
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedChannel, setSelectedChannel] = useState("All Categories");
+
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -113,9 +117,39 @@ function Live() {
     return () => clearInterval(interval);
   }, [slides.length]);
 
-  const handleWatchNow = () => {
-    alert("Server is busy, try again later.");
-  };
+const handleWatchNow = (item) => {
+  if (item?.videoUrl) {
+    setSelectedVideo(item.videoUrl);
+  } else {
+    alert("Live source not available");
+  }
+};
+
+// 🎥 Live YouTube Player
+if (selectedVideo) {
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black text-white p-4">
+      <div className="w-full h-[85vh] max-w-6xl mb-4">
+        <iframe
+          className="w-full h-full rounded-lg"
+          src={`https://www.youtube.com/embed/${selectedVideo}`}
+          title="Live Stream"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      </div>
+
+      <button
+        className="px-6 py-3 bg-red-600 hover:bg-red-700 rounded-md font-semibold"
+        onClick={() => setSelectedVideo(null)}
+      >
+        Close
+      </button>
+    </div>
+  );
+}
+
 
   const prevSlide = () =>
     setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
@@ -151,12 +185,10 @@ function Live() {
                 <p className="text-base text-gray-100 leading-relaxed mb-5">
                   {slide.description}
                 </p>
-                <button
-                  onClick={handleWatchNow}
-                  className="px-6 py-2 bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold rounded-full shadow-lg transition-all duration-300 hover:scale-105 active:scale-95"
-                >
-                  {slide.button}
-                </button>
+              
+               <button onClick={() => handleWatchNow(slides[currentIndex])}>
+  {slide.button}
+</button>
               </div>
             </div>
           ))}
@@ -225,12 +257,14 @@ function Live() {
                 </h5>
                 <p className="text-gray-600 text-xs mb-1">{item.time}</p>
                 <p className="text-gray-400 text-xs mb-3">{item.date}</p>
-                <button
-                  onClick={handleWatchNow}
-                  className="w-full py-1.5 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700 shadow-md transition-all"
-                >
-                  Watch Now
-                </button>
+               <button
+  onClick={() => handleWatchNow(item)}
+  className="w-full py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white text-sm font-semibold rounded-full
+             hover:from-red-600 hover:to-pink-600 active:scale-95 transition-all duration-300 shadow-lg"
+>
+  Watch Now
+</button>
+
               </div>
             </div>
           ))}
